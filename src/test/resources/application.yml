@@ -1,0 +1,15 @@
+# Default enviroment set up with port 8081 - redirected here from web server
+# as the application default port: Port 8080 set as internal port
+server:
+    address: 127.0.0.1
+    port: ${appPort:8081}
+    internalPort: 8080
+---
+# Local(dev) environment port set up
+spring:
+    profiles: local
+server:
+    address: 127.0.0.1
+    port: ${appPort:8081}
+    internalPort: 8080
+
